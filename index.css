@@ -1,0 +1,87 @@
+h1{
+color:yellow;
+text-align: center;
+}
+body{
+  background-color: #333;
+}
+
+.jumbotron{
+  width:80%
+  margin: auto;
+  background: #F2F3F4;
+  padding-top: 0px;
+}
+.jumbotron h1{
+  font-family:Roboto;
+  text-align:center;
+  font-size: 68px;
+
+}
+.jumbotron p{
+  font-family: 'Frank Ruhl Libre', serif;
+  font-size: 20px;
+}
+.questions{
+  width:85%;
+  margin: auto;
+  border-radius: 10px;
+  background: #F2F3F4;
+  padding-right: 60px;
+  padding-left: 60px;
+  padding-top: 50px;
+  padding-bottom: 17px;
+}
+//#rcorners2 {
+  //  border-radius: 25px;
+  //  border: 2px solid #73AD21;
+  //  padding: 20px;
+  //  width: 200px;
+  //  height: 150px;
+//}
+.questions p{
+  font-family: 'PT Serif', serif;
+  font-size: 20px;
+}
+.questions input{
+  margin:15px;
+}
+#add {
+  padding-right: 60px;
+    padding-left: 60px;
+}
+#message1,#message2{
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  padding-right: 60px;
+    padding-left: 60px;
+    font-size: 20px;
+}
+#warning,#warning2,#warning3,#warning1,#warning4,#warning5{
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: red;
+}
+.footer{
+
+  padding-top:10px;
+  float:right;
+  color: white;
+  padding-top: 30px;
+
+}
+
+.footer p{
+  font-family: 'PT Serif',serif;
+  font-style: normal;
+  font-size: 17px;
+}
+.yeah{
+  margin-left: 5px;
+}
+#result {
+font-family: Roboto;
+font-weight: bold;
+
+}
