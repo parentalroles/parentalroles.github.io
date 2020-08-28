@@ -1,8 +1,8 @@
 var para = document.getElementById('para')
 $('#add').on('click', function() {
 
-  var fd = 0.9;
-  var md = 0.9;
+  var fd = 0.5;
+  var md = 0.5;
   var td;
   var zd;
   var v0 = document.getElementById("v0").value;
@@ -90,10 +90,10 @@ $('#add').on('click', function() {
   }
 
   for (var i = 0; i < 5000; i++) {
-    var sc = (1 - a) * fd * (wd - wc) * v0 / ((1 - a) * (1 - md) + md);
-    var sd = fd * (wd - wc) * v0 / ((1 - a) * (1 - md) + md);
+    var sc = (1 - a) * r * fd * (wd - wc) * v0 / ((1 - a) * (1 - md) + md);
+    var sd = r * fd * (wd - wc) * v0 / ((1 - a) * (1 - md) + md);
     var epp = (1 - md) * (1 - fd) * wc * v2 * (1 - p) + (1 - md) * fd * wc * v1 * (1 - p) +
-      md * (1 - fd) * wc * v1 * (1 - r) + md * fd * wc * v0 * (1 - r);
+      md * (1 - fd) * wc * v1 * (1 - r) + md * fd * wc * v0 * (1 - r) + (1 - r) * fd * (wd - wc) * v0;
     var ec = (1 - b) * epp / ((1 - b) * (1 - md) + md);
     var ed = epp / ((1 - b) * (1 - md) + md);
     var w = (1 - md) * (1 - fd) * wc * v2 + (1 - md) * fd * wc * v1 + md * (1 - fd) * wc * v1 +
