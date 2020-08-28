@@ -97,7 +97,7 @@ $('#add').on('click', function() {
     var ec = (1 - b) * epp / ((1 - b) * (1 - md) + md);
     var ed = epp / ((1 - b) * (1 - md) + md);
     var w = (1 - md) * (1 - fd) * wc * v2 + (1 - md) * fd * wc * v1 + md * (1 - fd) * wc * v1 +
-      md * fd * wc * v0 + fd * (1 - md) * v0 * (wd - wc) + md * fd * v0 * (wd - wc);
+      md * fd * wc * v0 + fd * v0 * (wd - wc) ;
     var mdd = (md / w) * ((1 - fd) * (r * wc * v1 + sd + ed) + fd * (r * wc * v0 + sd + ed));
     var fdd = (fd / w) * ((wd - wc) * v0 + (1 - md) * wc * v1 + md * wc * v0);
     fd = Math.round(fdd.valueOf() * 1000000) / 1000000;
