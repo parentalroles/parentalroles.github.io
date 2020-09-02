@@ -47,7 +47,23 @@ $('#add').on('click', function() {
   } else {
     warning1.textContent = "";
   }
+  if (v1 < 0) {
+    warning1.textContent = "Answer should lie in between 0 and 1";
+    message1.textContent = "";
+    message2.textContent = "";
+    return;
+  } else {
+    warning1.textContent = "";
+  }
   if (v2 > 1) {
+    warning2.textContent = "Answer should lie in between 0 and 1";
+    message1.textContent = "";
+    message2.textContent = "";
+    return;
+  } else {
+    warning2.textContent = "";
+  }
+  if (v2 < 0) {
     warning2.textContent = "Answer should lie in between 0 and 1";
     message1.textContent = "";
     message2.textContent = "";
@@ -65,6 +81,30 @@ $('#add').on('click', function() {
   }
   if (v2 < v1) {
     warning2.textContent = "V2 must be greater than V1";
+    message1.textContent = "";
+    message2.textContent = "";
+    return;
+  } else {
+    warning2.textContent = "";
+  }
+  if (r < 0) {
+    warning2.textContent = "Answer should lie in between 0 and 1";
+    message1.textContent = "";
+    message2.textContent = "";
+    return;
+  } else {
+    warning2.textContent = "";
+  }
+  if (p < 0) {
+    warning2.textContent = "Answer should lie in between 0 and 1";
+    message1.textContent = "";
+    message2.textContent = "";
+    return;
+  } else {
+    warning2.textContent = "";
+  }
+  if (p > 1) {
+    warning2.textContent = "Answer should lie in between 0 and 1";
     message1.textContent = "";
     message2.textContent = "";
     return;
