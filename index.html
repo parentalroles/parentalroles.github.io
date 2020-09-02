@@ -23,12 +23,14 @@
 			<p>The game assumes an equal number of males and females in the population who pair up with each other to lay their first clutches of the season-- the number of eggs laid by the female is Wc (which is also the total number of eggs she lays if she
 				cares of the young). The female can lay a second clutch (of size Wd-Wc) if she deserts, and we assume that deserting females always get to remate. There is no third clutch.</p>
 			<p>The offspring survival depends on the number of parents caring: V0 with 0 parents caring, V1 with 1 parent (either father or mother) caring and V2 with both parents caring. We require that 0 &lt;/= V0 &lt;/= V1 &lt;/= V2 &lt;/= 1</p>
-			<p>Deserting males can have an advantage over caring males in dominating matings for the second clutch-- the extent of this domination is specified by the parameter a which lies between 0 and 1. When a is 0, caring and deserting males are equally
-				likely to mate in the second round. When a is 1, deserting males completely exclude caring males from the second round of matings.</p>
-			<p>We also allow for females to mate multiply in the first round, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. We would expect 0 &lt;/= r &lt;/= p
+			<p>Either caring or deserting males can have an advantage with respect to matings for the second clutch-- the direction and extent of this advantage is specified by the parameter alpha. 
+				Alpha denotes the fraction of the deserting males' second clutch matings that caring males obtain. Hence when alpha is 0, deserting males completely dominate these matings. When alpha = 1, caring and deserting males are equally
+				likely to mate in the second round. When alpha < 1, deserting males have an advantage in the second round of matings and when alpha > 1, caring males have an advantage in the second round of matings.</p>
+			<p>We also allow for females to mate multiply, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. We would expect 0 &lt;/= r &lt;/= p
 				&lt;/=1.</p>
-			<p>Deserting males could also have an advantage in the extra-pair matings in the population-- the extent of this advantage is specified by b (lying between 0 and 1), which acts similar to the parameter a. When b is 0, caring and deserting males
-				are equally likely to father the extra-pair young in the population. When b is 1, deserting males completely exclude caring males from extra-pair matings.</p>
+			<p>Similar to alpha, the direction and extent of the advantage with respect to extra-pair matings is specified by beta. When beta is 1, caring and deserting males
+				are equally likely to father the extra-pair young in the population. When beta is 0, deserting males completely exclude caring males from extra-pair matings. 
+				When beta < 1, deserting males have an advantage in these matings, and when beta > 1, caring males have an advantage.</p>
 		</div>
 	</div>
 
