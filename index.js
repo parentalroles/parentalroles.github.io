@@ -71,16 +71,16 @@ $('#add').on('click', function() {
   } else {
     warning3.textContent = "";
   }
-  if (a > 1) {
-    warning4.textContent = "Answer should lie in between 0 and 1";
+  if (a < 0) {
+    warning4.textContent = "Answer should be positive";
     message1.textContent = "";
     message2.textContent = "";
     return;
   } else {
     warning4.textContent = "";
   }
-  if (b > 1) {
-    warning5.textContent = "Answer should lie in between 0 and 1";
+  if (b < 0) {
+    warning5.textContent = "Answer should be positive";
     message1.textContent = "";
     message2.textContent = "";
     return;
