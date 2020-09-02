@@ -31,6 +31,14 @@ $('#add').on('click', function() {
   } else {
     warning.textContent = "";
   }
+  if (v0 < 0) {
+    warning.textContent = "Answer should lie in between 0 and 1";
+    message1.textContent = "";
+    message2.textContent = "";
+    return;
+  } else {
+    warning.textContent = "";
+  }
   if (v1 > 1) {
     warning1.textContent = "Answer should lie in between 0 and 1";
     message1.textContent = "";
