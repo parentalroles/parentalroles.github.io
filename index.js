@@ -88,7 +88,7 @@ $('#add').on('click', function() {
     warning2.textContent = "";
   }
   if (r < 0) {
-    warning2.textContent = "Answer should lie in between 0 and 1";
+    warning3.textContent = "Answer should lie in between 0 and 1";
     message1.textContent = "";
     message2.textContent = "";
     return;
@@ -96,7 +96,7 @@ $('#add').on('click', function() {
     warning2.textContent = "";
   }
   if (p < 0) {
-    warning2.textContent = "Answer should lie in between 0 and 1";
+    warning3.textContent = "Answer should lie in between 0 and 1";
     message1.textContent = "";
     message2.textContent = "";
     return;
@@ -104,7 +104,7 @@ $('#add').on('click', function() {
     warning2.textContent = "";
   }
   if (p > 1) {
-    warning2.textContent = "Answer should lie in between 0 and 1";
+    warning3.textContent = "Answer should lie in between 0 and 1";
     message1.textContent = "";
     message2.textContent = "";
     return;
