@@ -90,12 +90,12 @@ $('#add').on('click', function() {
   }
 
   for (var i = 0; i < 5000; i++) {
-    var sc = (1 - a) * r * fd * (wd - wc) * v0 / ((1 - a) * (1 - md) + md);
-    var sd = r * fd * (wd - wc) * v0 / ((1 - a) * (1 - md) + md);
+    var sc = a * r * fd * (wd - wc) * v0 / ( a * (1 - md) + md);
+    var sd = r * fd * (wd - wc) * v0 / ( a * (1 - md) + md);
     var epp = (1 - md) * (1 - fd) * wc * v2 * (1 - p) + (1 - md) * fd * wc * v1 * (1 - p) +
       md * (1 - fd) * wc * v1 * (1 - r) + md * fd * wc * v0 * (1 - r) + (1 - r) * fd * (wd - wc) * v0;
-    var ec = (1 - b) * epp / ((1 - b) * (1 - md) + md);
-    var ed = epp / ((1 - b) * (1 - md) + md);
+    var ec =  b * epp / ( b * (1 - md) + md);
+    var ed = epp / ( b * (1 - md) + md);
     var w = (1 - md) * (1 - fd) * wc * v2 + (1 - md) * fd * wc * v1 + md * (1 - fd) * wc * v1 +
       md * fd * wc * v0 + fd * v0 * (wd - wc) ;
     var mdd = (md / w) * ((1 - fd) * (r * wc * v1 + sd + ed) + fd * (r * wc * v0 + sd + ed));
