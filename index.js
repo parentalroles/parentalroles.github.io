@@ -88,28 +88,28 @@ $('#add').on('click', function() {
     warning2.textContent = "";
   }
   if (r < 0) {
-    warning3.textContent = "Answer should lie in between 0 and 1";
+    warning3.textContent = "answer must lie in between 0 and 1 ";
     message1.textContent = "";
     message2.textContent = "";
     return;
   } else {
-    warning2.textContent = "";
+    warning3.textContent = "";
   }
   if (p < 0) {
-    warning3.textContent = "Answer should lie in between 0 and 1";
+    warning3.textContent = "answer must lie in between 0 and 1 ";
     message1.textContent = "";
     message2.textContent = "";
     return;
   } else {
-    warning2.textContent = "";
+    warning3.textContent = "";
   }
   if (p > 1) {
-    warning3.textContent = "Answer should lie in between 0 and 1";
+    warning3.textContent = "answer must lie in between 0 and 1 ";
     message1.textContent = "";
     message2.textContent = "";
     return;
   } else {
-    warning2.textContent = "";
+    warning3.textContent = "";
   }
   if (r > p) {
     warning3.textContent = "answer must lie in between 0 and p ";
