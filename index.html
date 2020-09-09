@@ -11,8 +11,8 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
 	<!DOCTYPE ht		<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:400,700" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre" rel="stylesheet">
+	<link href="nouislider.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
 
 	<div class="container">
@@ -22,46 +22,169 @@
 				incorporates various assumptions about male rematings and partial paternity. </p>
 			<p>The game assumes an equal number of males and females in the population who pair up with each other to lay their first clutches of the season-- the number of eggs laid by the female is Wc (which is also the total number of eggs she lays if she
 				cares of the young). The female can lay a second clutch (of size Wd-Wc) if she deserts, and we assume that deserting females always get to remate. There is no third clutch.</p>
-			<p>The offspring survival depends on the number of parents caring: V0 with 0 parents caring, V1 with 1 parent (either father or mother) caring and V2 with both parents caring. We require that 0 &lt;/= V0 &lt;/= V1 &lt;/= V2 &lt;/= 1</p>
-			<p>Either caring or deserting males can have an advantage with respect to matings for the second clutch-- the direction and extent of this advantage is specified by the parameter alpha. 
-				Alpha denotes the fraction of the deserting males' second clutch matings that caring males obtain. Hence when alpha is 0, deserting males completely dominate these matings. When alpha = 1, caring and deserting males are equally
-				likely to mate in the second round. When alpha < 1, deserting males have an advantage in the second round of matings and when alpha > 1, caring males have an advantage in the second round of matings.</p>
-			<p>We also allow for females to mate multiply, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. We would expect 0 &lt;/= r &lt;/= p
-				&lt;/=1.</p>
-			<p>Similar to alpha, the direction and extent of the advantage with respect to extra-pair matings is specified by beta. When beta is 1, caring and deserting males
-				are equally likely to father the extra-pair young in the population. When beta is 0, deserting males completely exclude caring males from extra-pair matings. 
-				When beta < 1, deserting males have an advantage in these matings, and when beta > 1, caring males have an advantage.</p>
+			<p>The offspring survival depends on the number of parents caring: V0 with 0 parents caring, V1 with 1 parent (either father or mother) caring and V2 with both parents caring. We require that 0 &le; V0 &le; V1 &le; V2 &le; 1.</p>
+			<p>Either caring or deserting males can have an advantage with respect to matings for the second clutch-- the direction and extent of this advantage is specified by the parameter &alpha;. 
+				It denotes the fraction of the deserting males' second clutch matings that caring males obtain. Hence when &alpha;=0, deserting males completely dominate these matings. When &alpha; = 1, caring and deserting males are equally
+				likely to mate in the second round. When &alpha; &lt; 1, deserting males have an advantage in the second round of matings and when &alpha; &gt; 1, caring males have an advantage in the second round of matings.</p>
+			<p>We also allow for females to mate multiply, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. We would expect 0 &le; r &le; p
+				&le;1.</p>
+			<p>Similar to &alpha;, the direction and extent of the advantage with respect to extra-pair matings is specified by &beta;. When &beta;=1, caring and deserting males
+				are equally likely to father the extra-pair young in the population. When &beta;=0, deserting males completely exclude caring males from extra-pair matings. 
+				When &beta; &lt; 1, deserting males have an advantage in these matings, and when &beta; &gt; 1, caring males have an advantage.</p>
 		</div>
 	</div>
 
 	<div class="questions">
 
 		<p>&nbsp &nbspPlease specify the parameter values you would like to run this simulation for:</p>
-		<p>1.&nbspHow many eggs does a female lay if she provides parental care? (Value of Wc)</p>
-		<input id = "wc" type = number>
-		<p>2. How many more can she lay if she does not care? (Wd-Wc)</p>
-		<input id = "ad" type = number>
-		<p>3. What is the survival probability of eggs with 0 parents caring? (V0)</p>
-		<p>&nbsp &nbsp (answer has to lie between 0 and 1)</p>
-		<input id = "v0" type = number > <span id = warning></span>
-		<p>4. What is the survival probability of eggs with 1 parent caring? (V1)</p>
-		<p>&nbsp &nbsp (answer has to lie between V0 and 1)</p>
-		<input id = "v1" type = number> <span id = warning1></span>
-		<p>5. What is the survival probability of eggs with 2 parents caring? (V2)</p>
-		<p>&nbsp &nbsp (answer has to lie between V1 and 1)</p>
-		<input id = "v2" type = number> <span id = warning2></span>
-		<p>6. What is the paternity of a caring male in his first clutch? (p)</p>
-		<p>&nbsp &nbsp (answer has to lie between 0 and 1)</p>
-		<input id = "p" type = number>
-		<p>7. What is the paternity of a deserting male in his first clutch? (r)</p>
-		<p>&nbsp &nbsp (answer has to lie between 0 and p)</p>
-		<input id = "r" type = number> <span id = warning3></span>
-		<p>8. Please specify parameter for direction and extent of advantage with respect to second round of matings: (alpha)</p>
-		<p>&nbsp &nbsp (answer has to be positive)</p>
-		<input id = "a" type = number> <span id = warning4></span>
-		<p>9. Please specify parameter for direction and extent of advantage with respect to extra-pair matings: (beta)</p>
-		<p>&nbsp &nbsp (answer has to be positive)</p>
-		<input id = "b" type = number> <span id = warning5></span><br />
+		<p>1.&nbspHow many eggs does a female lay if she provides parental care (Wc) and if she does not provide parental care(Wd)? </p>
+		<br>
+		<br>
+	
+		<div id='wslider'>	</div>
+		<script src="nouislider.js"></script>
+		
+		<script>
+		var wslider = document.getElementById('wslider');
+		
+		noUiSlider.create(wslider, {start: [3, 5], 
+			tooltips: [{
+      to: function ( value ) {
+        return 'Wc='+ value;
+      },
+      from: function ( value ) {
+        return value;
+	  }}, {
+      to: function ( value ) {
+		return 'Wd='+ value;}
+		,from: function ( value ) {
+        return value;
+	  }}],
+	  step: 0.5,connect: [true,true,false],range: {'min': 0,
+			'max': 10 }
+		});
+	
+
+	
+	</script>
+	<br>
+	<div id="wc" type=number></div>
+	<div id="wd" type=number></div>
+<script>
+	var wvalues = [
+    document.getElementById("wc"),
+    document.getElementById("wd")];
+	wvalues.innerHTML=wslider.noUiSlider.get();
+	wslider.noUiSlider.on('update', function (values, handle) {
+		wvalues[handle].innerHTML=wvalues[handle].id + '=' + values[handle];
+		
+	});
+
+</script>
+
+<br>
+
+		<p>2. What is the survival probability of eggs with zero(V0), one(V1) or both(V2) parent caring? </p>
+		<br>
+		<br>
+		
+		<div id='vslider'>	</div>
+		<script src="nouislider.js"></script>
+		<script>
+		var vslider = document.getElementById('vslider');
+		 
+		noUiSlider.create(vslider, {start: [0.1, 0.5,0.8], tooltips: [{
+      to: function ( value ) {
+        return 'V0='+ value;
+      },
+      from: function ( value ) {
+        return value;
+	  }}, {
+      to: function ( value ) {
+        return 'V1='+ value;
+      },
+      from: function ( value ) {
+        return value;
+	  }}, {
+      to: function ( value ) {
+        return 'V2='+ value;
+      },
+      from: function ( value ) {
+        return value;
+	  }}],
+	  step: 0.01,connect: [true,true,true,false],range: {'min': 0,
+   	     'max': 1 }});
+		</script>
+<br>
+<div id="v0" type=number></div>
+<div id="v1" type=number></div>
+<div id="v2" type=number></div>
+		<script> 
+		
+		var valuesDivs = [
+    document.getElementById('v0'),
+    document.getElementById('v1'),
+    document.getElementById('v2')
+];
+
+vslider.noUiSlider.on('update', function (values, handle) {
+    valuesDivs[handle].innerHTML =valuesDivs[handle].id + '=' + values[handle];
+});
+
+		</script>
+
+
+
+		<br>
+		<p>3. What is the paternity of a caring male in his first clutch (p) and 
+		what is the paternity of a deserting male in his first clutch? (r) </p>
+		<br>
+		<br>
+
+			
+		<div id='pslider'>	</div>
+		<script src="nouislider.js"></script>
+		<script>
+		var pslider = document.getElementById('pslider');
+		 
+		noUiSlider.create(pslider, {start: [0.3, 0.5], 
+			tooltips: [{
+      to: function ( value ) {
+        return 'r='+ value;
+      },
+      from: function ( value ) {
+        return value;
+	  }}, {
+      to: function ( value ) {
+		return 'p='+ value;}
+		,from: function ( value ) {
+        return value;
+	  }}],
+	  step: 0.01,connect: [true,true,false],range: {'min': 0,
+			'max': 1 }
+		});
+</script>
+<br>
+<div id="r"></div>
+<div id="p"></div>
+<script>
+
+var valuesDiv = [document.getElementById('r'),document.getElementById('p')];
+
+	pslider.noUiSlider.on('update', function (values, handle) {
+    valuesDiv[handle].innerHTML = valuesDiv[handle].id +'=' + values[handle];});
+
+</script>
+
+	
+<br>
+
+		<p>4. Please specify parameter for direction and extent of advantage with respect to second round of matings: (&alpha;)</p>
+		<p>&nbsp &nbsp (&alpha; has to be non-negative)</p>
+		<input id = "a" type = number> 
+		<p>5. Please specify parameter for direction and extent of advantage with respect to extra-pair matings: (&beta;)</p>
+		<p>&nbsp &nbsp (&beta; has to be non-negative)</p>
+		<input id = "b" type = number> 
 		<input id="add" type="button" class="btn btn-primary" value="Submit"><br />
 		<p id="result">&nbsp &nbspResults of the simulation:</p>
 		<p>&nbsp &nbspWe would predict for the parameter values you have input that:<p>
@@ -76,8 +199,11 @@
 						</div>
 						<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous">
 						</script>
-
+						<script src="nouislider.js"></script>
 						<script type="text/javascript" src="index.js"></script>
+
+
 </body>
+
 
 </html>
