@@ -18,18 +18,23 @@
 	<div class="container">
 		<div class="jumbotron">
 			<h1>Evolution of Parental Roles</h1>
-			<p>&nbsp &nbsp &nbsp &nbspThis is a simple simulation to predict sex roles in parental care that we would expect to evolve under the specified assumptions. The model follows game-2 of Maynard Smith (1977), but makes the game consistent and
-				incorporates various assumptions about male rematings and partial paternity. </p>
-			<p>The game assumes an equal number of males and females in the population who pair up with each other to lay their first clutches of the season-- the number of eggs laid by the female is Wc (which is also the total number of eggs she lays if she
-				cares of the young). The female can lay a second clutch (of size Wd-Wc) if she deserts, and we assume that deserting females always get to remate. There is no third clutch.</p>
-			<p>The offspring survival depends on the number of parents caring: V0 with 0 parents caring, V1 with 1 parent (either father or mother) caring and V2 with both parents caring. We require that 0 &le; V0 &le; V1 &le; V2 &le; 1.</p>
-			<p>Either caring or deserting males can have an advantage with respect to matings for the second clutch-- the direction and extent of this advantage is specified by the parameter &alpha;. 
-				It denotes the fraction of the deserting males' second clutch matings that caring males obtain. Hence when &alpha;=0, deserting males completely dominate these matings. When &alpha; = 1, caring and deserting males are equally
-				likely to mate in the second round. When &alpha; &lt; 1, deserting males have an advantage in the second round of matings and when &alpha; &gt; 1, caring males have an advantage in the second round of matings.</p>
-			<p>We also allow for females to mate multiply, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. We would expect 0 &le; r &le; p
-				&le;1.</p>
-			<p>Similar to &alpha;, the direction and extent of the advantage with respect to extra-pair matings is specified by &beta;. When &beta;=1, caring and deserting males
-				are equally likely to father the extra-pair young in the population. When &beta;=0, deserting males completely exclude caring males from extra-pair matings. 
+			<p>&nbsp &nbsp &nbsp &nbspThis is a simple simulation to predict sex roles in parental care that we would expect to evolve under assumptions specified below.
+				 The model follows game-2 of Maynard Smith (1977), but makes the game self-consistent and incorporates the following assumptions about male rematings and partial paternity. </p>
+			<p>The game assumes an equal number of males and females in the population who pair up with each other to lay their first clutches of the season-- the number of eggs laid by the female is Wc (which is also the total number of eggs she lays if she cares for the young). 
+				The female can lay a second clutch (of size Wd-Wc) if she deserts, and we assume that deserting females always get to remate. There is no third clutch. The first clutch matings are synchronous, as are the second clutch matings.</p>
+			<p>The offspring's survival depends on the number of parents caring: V0 with 0 parents caring, V1 with 1 parent (either father or mother) caring and V2 with both parents caring. We require that 0 &le; V0 &le; V1 &le; V2 &le; 1.</p>
+			<p>Females can mate multiply, and hence males to have only partial paternity of their clutches. The paternity of a caring male is p and that of a deserting male is r. Due to mechanisms such as mate guarding, we require 0 &le; r &le; p &le; 1.
+	</p>
+	<p>
+		Either caring or deserting males can have an advantage with respect to matings for the second clutch-- the direction and extent of this advantage is specified by the parameter &alpha;. 
+		It denotes the fraction of the deserting males' second clutch matings that caring males obtain. 
+		Hence when &alpha;=0, deserting males completely dominate these matings.
+		 When &alpha; = 1, caring and deserting males are equally likely to mate in the second round. 
+		 When &alpha; &lt; 1, deserting males have an advantage in the second round of matings and when &alpha; &gt; 1, caring males have an advantage in the second round of matings.
+	</p>
+			<p>Similar to &alpha;, the direction and extent of the advantage with respect to extra-pair matings is specified by &beta;. 
+				When &beta;=1, caring and deserting males are equally likely to father the extra-pair young in the population. 
+				When &beta;=0, deserting males completely exclude caring males from extra-pair matings. 
 				When &beta; &lt; 1, deserting males have an advantage in these matings, and when &beta; &gt; 1, caring males have an advantage.</p>
 		</div>
 	</div>
