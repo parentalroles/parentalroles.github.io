@@ -33,7 +33,9 @@ $('#add').on('click', function() {
     fd = Math.round(fdd.valueOf() * 1000000) / 1000000;
     md = Math.round(mdd.valueOf() * 1000000) / 1000000;
 
-
+    if (md==md*md) {
+      break
+    }
     
     
   }
